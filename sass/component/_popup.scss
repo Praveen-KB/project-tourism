@@ -31,6 +31,7 @@
         border-radius: .3rem;
         opacity: 0;
         display: table;
+        
         overflow: hidden;
         transition: all .4s .1s;
     }
@@ -38,6 +39,10 @@
     &__left {
         width: 33.33%;
         display: table-cell;
+
+        @include respond(tab-port){
+            display: table-row;
+        }
     }
 
     &__right {
@@ -48,8 +53,13 @@
     }
 
     &__img {
-        display: block;
+        display:block;
         width: 100%;
+
+        @include respond(tab-port){
+            display: inline-block;
+            width: 50%;
+        }
     }
 
     &__text {
